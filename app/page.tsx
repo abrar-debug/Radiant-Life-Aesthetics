@@ -88,7 +88,7 @@ export default function Home() {
           </div>
 
           <div className="container mx-auto text-left relative z-10">
-            <h1 className="text-4xl md:text-6xl font-bold text-primary mb-6 drop-shadow-sm">
+            <h1 className="text-4xl md:text-6xl font-bold text-background mb-6 drop-shadow-sm">
               Be Your Best You
             </h1>
             <p className="text-lg md:text-xl text-white/90 mb-8 mx-auto drop-shadow-sm">
@@ -103,7 +103,7 @@ export default function Home() {
               </Button>
               <Button
                 size="lg" 
-                className="bg-secondary/50 hover:bg-white/20 text-primary-foreground"
+                className=" mb-8 mx-auto bg-secondary/50 hover:bg-white/20 text-primary-foreground"
                 onClick={() => router.push('/contact')}
               >
                 Talk to Us
@@ -137,7 +137,7 @@ export default function Home() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
               <div className="relative h-[500px] overflow-hidden">
                 <Image
-                  src="https://images.unsplash.com/photo-1560750588-73207b1ef5b8?q=80&w=2070"
+                  src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                   alt="Welcome to our studio"
                   fill
                   className="object-cover"
