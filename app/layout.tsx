@@ -1,11 +1,18 @@
 import './globals.css';
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import { Inter, Playball } from 'next/font/google';
 
 const inter = Inter({ 
   subsets: ['latin'],
   weight: ['300', '400', '500', '600'],
   display: 'swap',
+});
+
+const playball = Playball({
+  subsets: ['latin'],
+  weight: ['400'],
+  display: 'swap',
+  variable: '--font-playball',
 });
 
 export const metadata: Metadata = {
@@ -20,7 +27,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={`${inter.className} ${playball.variable}`}>{children}</body>
     </html>
   );
 }

@@ -149,12 +149,12 @@ export default function Treatments() {
                     <h2 className="text-2xl md:text-3xl font-bold text-primary">{treatment.title}</h2>
                     <div className="w-20 h-1 bg-secondary rounded-full" />
 
-                    <Card className="p-4 md:p-6 bg-secondary/5">
+                    <Card className="p-4 md:p-6 bg-secondary/5 rounded-2xl">
                       <h3 className="text-lg md:text-xl font-semibold mb-3 md:mb-4 text-primary">What is it?</h3>
                       <p className="text-sm md:text-base text-muted-foreground">{treatment.whatIsIt}</p>
                     </Card>
 
-                    <Card className="p-4 md:p-6 bg-secondary/5">
+                    <Card className="p-4 md:p-6 bg-secondary/5 rounded-2xl">
                       <h3 className="text-lg md:text-xl font-semibold mb-3 md:mb-4 text-primary">Who can benefit?</h3>
                       <p className="text-sm md:text-base text-muted-foreground mb-3 md:mb-4">{treatment.whoCanBenefit}</p>
 
@@ -177,7 +177,7 @@ export default function Treatments() {
 
                         {isPriceListOpen && (
                           <Card className="p-4 md:p-6 bg-secondary/5 animate-accordion-down">
-                            <div className="space-y-4">
+                            <div className="space-y-4 ">
                               {chemicalPeelPrices.map((treatment, i) => (
                                 <div key={i} className="flex justify-between items-start border-b border-border pb-4 last:border-0 last:pb-0">
                                   <div className="flex-1">
@@ -195,14 +195,14 @@ export default function Treatments() {
 
                     <div className="flex flex-col md:flex-row gap-4">
                       <Button
-                        className="flex-1 bg-secondary hover:bg-primary/20 text-secondary-foreground"
+                        className="flex-1 bg-secondary hover:bg-primary/20 text-secondary-foreground rounded-full"
                         onClick={() => window.open('https://rla.healthaccess.co.za/#/public/bookings', '_blank')}
                       >
                         Book Consultation
                       </Button>
                       <Button
 
-                        className="flex-1 border-secondary text-foreground hover:bg-secondary/20"
+                        className="flex-1 border-secondary text-foreground hover:bg-secondary/20 rounded-full"
                         onClick={() => router.push('/contact')}
                       >
                         Talk to Us
@@ -210,7 +210,7 @@ export default function Treatments() {
                     </div>
                   </div>
 
-                  <div className={`relative h-[300px] md:h-[400px] lg:h-[600px] overflow-hidden ${index % 2 === 0 ? 'lg:order-2' : 'lg:order-1'
+                  <div className={`relative h-[300px] md:h-[400px] lg:h-[600px] overflow-hidden rounded-2xl ${index % 2 === 0 ? 'lg:order-2' : 'lg:order-1'
                     }`}>
                     <Image
                       src={treatment.image}
@@ -218,7 +218,7 @@ export default function Treatments() {
                       fill
                       className="object-cover"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent " />
                   </div>
                 </div>
               ))}

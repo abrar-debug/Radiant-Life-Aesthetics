@@ -11,7 +11,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* About */}
           <div>
-            <h3 className="text-lg font-normal mb-4">RADIANT LIFE</h3>
+            <h3 className="text-lg font-normal mb-4">Radiant Life</h3>
             <p className="text-muted-foreground text-sm mb-4">
               Your trusted partner in aesthetic wellness, providing premium beauty treatments and personalized care.
             </p>

@@ -45,6 +45,16 @@
   }
 }
 
+/* Apply Playball font to all headings except those in treatment cards */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-playball);
+}
+
+/* Reset font for treatment card titles */
+.treatment-card-title {
+  font-family: inherit;
+}
+
 .fade-in {
   animation: fadeIn 0.5s ease-in;
 }

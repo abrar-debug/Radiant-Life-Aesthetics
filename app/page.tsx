@@ -87,55 +87,63 @@ export default function Home() {
             <div className="absolute inset-0 bg-gradient-to-b from-primary/70 via-secondary/40 to-background/95" />
           </div>
 
-          <div className="container mx-auto text-left relative z-10">
+          <div className="container px-6 mx-auto text-left relative z-10">
             <h1 className="text-4xl md:text-6xl font-bold text-background mb-6 drop-shadow-sm">
               Be Your Best You
             </h1>
             <p className="text-lg md:text-xl text-white/90 mb-8 mx-auto drop-shadow-sm">
               It’s all about healthy skin and the art of graceful ageing
             </p>
+
             <div className="space-x-4">
               <Button
                 size="lg"
-                className="bg-secondary/50 hover:bg-white/20 text-primary-foreground"
+                className="bg-secondary/70 hover:bg-white/20 text-foreground rounded-full"
                 onClick={() => window.open('https://rla.healthaccess.co.za/#/public/bookings', '_blank')}>
                 Book Consultation
               </Button>
               <Button
-                size="lg" 
-                className=" mb-8 mx-auto bg-secondary/50 hover:bg-white/20 text-primary-foreground"
-                onClick={() => router.push('/contact')}
-              >
+                size="lg"
+                className=" mb-8 mx-auto bg-secondary/70 hover:bg-white/20 text-foreground rounded-full"
+                onClick={() => router.push('/contact')}>
                 Talk to Us
               </Button>
             </div>
+
           </div>
         </section>
 
+        {/* Quote */}
         <section
           ref={quoteRef}
           className={`py-20 bg-background/50 ${quoteInView ? 'fade-in' : 'opacity-0'}`}
         >
+
           <div className="container  mx-auto text-center">
             <Quote className="w-16 h-16 text-secondary mx-auto mb-8 opacity-50" />
             <blockquote className="text-2xl md:text-2xl font-light italic text-foreground/50 max-w-4xl mx-auto mb-8">
               "My aim is not to change your face but to enhance the natural beauty that already exists by also slowing down the aging process for as long as possible."
             </blockquote>
+
             <div className="flex items-center justify-center space-x-4">
               <div className="text-left">
-                <p className="font-semibold text-foreground/80">– Mishqah Dollie​</p>
+                <p className="font-semibold text-foreground/80">
+                  – Mishqah Dollie
+                </p>
               </div>
             </div>
+
           </div>
         </section>
 
+        {/* Welcome */}
         <section
           ref={welcomeRef}
-          className={`py-24 bg-background ${welcomeInView ? 'fade-in' : 'opacity-0'}`}
-        >
+          className={`py-24 bg-background ${welcomeInView ? 'fade-in' : 'opacity-0'}`}>
+
           <div className="container px-4 mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-              <div className="relative h-[500px] overflow-hidden">
+              <div className="relative h-[500px] overflow-hidden rounded-3xl">
                 <Image
                   src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                   alt="Welcome to our studio"
@@ -144,8 +152,11 @@ export default function Home() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
               </div>
+
               <div className="space-y-6">
-                <h2 className="text-primary text-3xl md:text-4xl font-bold">Welcome to Our Studio!</h2>
+                <h2 className="text-primary text-3xl md:text-4xl font-bold">
+                  Welcome to Our Studio!
+                </h2>
                 <div className="w-20 h-1 bg-secondary rounded-full" />
                 <p className="text-lg text-muted-foreground">
                   Our Studio is defined by our core values.  Here at Radiant Life Aesthetics, we believe that well-being is about vitality and not age.. After all, we’re only as ‘old’ as we feel – and we all know that looking good means feeling great! When it comes to looking good, the only ones we have to impress are ourselves.
@@ -154,12 +165,12 @@ export default function Home() {
                   Vitality is a celebration of where we are in life and how far we’ve come. Our bodies and the skin we’re in has brought us here, isn’t that something to celebrate?
                 </p>
                 <Button
-                  className="bg-secondary hover:bg-primary/20 text-secondary-foreground mt-4"
-                  onClick={() => router.push('/about')}
-                >
+                  className="bg-secondary hover:bg-primary/20 text-secondary-foreground mt-4 rounded-full"
+                  onClick={() => router.push('/about')}>
                   Learn More About Us
                 </Button>
               </div>
+
             </div>
           </div>
         </section>
@@ -174,13 +185,14 @@ export default function Home() {
             <h2 className="text-primary text-3xl md:text-4xl font-bold text-center mb-12">
               What we can do for you
             </h2>
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {treatments.map((treatment, index) => (
                 <Card
                   key={treatment.title}
-                  className={`overflow-hidden group transition-all duration-500 hover:shadow-lg transform hover:-translate-y-1
-                    ${treatmentsInView ? 'slide-up opacity-100' : 'opacity-0 translate-y-8'}`}
-                >
+                  className={`overflow-hidden group transition-all duration-500 hover:shadow-lg transform hover:-translate-y-1 rounded-2xl
+                    ${treatmentsInView ? 'slide-up opacity-100' : 'opacity-0 translate-y-8'}`}>
+
                   <div className="relative h-48 w-full">
                     <Image
                       src={treatment.image}
@@ -191,11 +203,11 @@ export default function Home() {
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                   </div>
                   <div className="p-6 relative">
-                    <h3 className="text-xl font-semibold mb-2">{treatment.title}</h3>
+                    <h3 className="text-xl font-semibold mb-2 treatment-card-title">{treatment.title}</h3>
                     <p className="text-muted-foreground">{treatment.description}</p>
                     <Button
                       variant="ghost"
-                      className="mt-4 hover:text-primary hover:bg-secondary/10"
+                      className="mt-4 hover:text-primary hover:bg-background/10"
                       onClick={() => handleLearnMore(treatment.id)}
                     >
                       Learn More
@@ -208,7 +220,7 @@ export default function Home() {
         </section>
 
         {/* Questions */}
-        <section 
+        <section
           ref={questionsRef}
           className={`relative py-20 ${questionsInView ? 'fade-in' : 'opacity-0'}`}
         >
@@ -222,13 +234,15 @@ export default function Home() {
             <div className="absolute inset-0 bg-gradient-to-b from-primary/50 to-primary/10 backdrop-blur-sm" />
           </div>
           <div className="container px-4 mx-auto text-center max-w-2xl relative z-10">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">Questions?</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
+              Questions?
+            </h2>
             <p className="text-lg text-white/90 mb-8">
               We're here to help you make informed decisions about your aesthetic journey. Our expert team is ready to answer any questions you may have about our treatments and services.
             </p>
-            <Button 
-              size="lg" 
-              className="bg-secondary hover:bg-primary/20 text-secondary-foreground"
+            <Button
+              size="lg"
+              className="bg-secondary hover:bg-primary/20 text-secondary-foreground rounded-full"
               onClick={() => router.push('/contact')}
             >
               Talk to Us

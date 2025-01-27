@@ -91,7 +91,7 @@ export default function Partners() {
               {partners.map((partner, index) => (
                 <Card
                   key={partner.name}
-                  className={`group hover:shadow-lg transition-all duration-300 ${
+                  className={`group hover:shadow-lg transition-all duration-300 rounded-2xl overflow-hidden ${
                     partnersInView ? 'slide-up opacity-100' : 'opacity-0 translate-y-8'
                   }`}
                   style={{ 

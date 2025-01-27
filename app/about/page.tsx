@@ -59,7 +59,7 @@ export default function About() {
                   Here at Radiant Life aesthetics we want to slow down the raging process,  by maintaining your beautifully natural and youthful looking skin, while also preventing further damage.
                 </p>
               </div>
-              <div className="relative h-[600px] overflow-hidden">
+              <div className="relative h-[600px] overflow-hidden rounded-2xl">
                 <Image
                   src="https://i0.wp.com/radiantlifeaesthetics.co.za/wp-content/uploads/2022/04/pexels-monstera-6621353-1-e1651056438602.jpg?resize=1024%2C722&ssl=1"
                   alt="Our modern aesthetic clinic"
@@ -79,7 +79,7 @@ export default function About() {
         >
           <div className="container px-4 mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-              <div className="relative h-[500px] overflow-hidden order-2 md:order-1">
+              <div className="relative h-[500px] overflow-hidden order-2 md:order-1 rounded-2xl">
                 <Image
                   src="https://i0.wp.com/radiantlifeaesthetics.co.za/wp-content/uploads/2022/04/Screen-Shot-2022-04-05-at-21.18.49.png?w=575&ssl=1"
                   alt="Our mission in action"
@@ -118,7 +118,7 @@ export default function About() {
                 <p className="text-lg text-muted-foreground">
                 This understanding led to the creation of our comprehensive approach to aesthetic wellness. We don't just treat symptoms; we enhance your natural beauty while promoting overall skin health and wellness. Our goal is to help you achieve lasting results that make you feel confident and beautiful every day.                </p>
               </div>
-              <div className="relative h-[600px] overflow-hidden">
+              <div className="relative h-[600px] overflow-hidden rounded-2xl">
                 <Image
                   src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=2070"
                   alt="Dr. Sarah Mitchell consulting with a patient"

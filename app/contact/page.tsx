@@ -54,7 +54,7 @@ export default function Contact() {
             </p>
             <Button 
               size="lg" 
-              className="bg-secondary text-foreground hover:bg-primary/20"
+              className="bg-secondary text-foreground hover:bg-primary/20 rounded-full"
               onClick={() => window.open('https://rla.healthaccess.co.za/#/public/bookings', '_blank')}
             >
               Make a Booking
@@ -74,7 +74,7 @@ export default function Contact() {
                 <h2 className="text-3xl font-bold">You Can Find Us At</h2>
                 <div className="w-20 h-1 bg-secondary rounded-full" />
                 
-                <Card className="p-6 hover:shadow-lg transition-all duration-300">
+                <Card className="p-6 hover:shadow-lg transition-all duration-300 rounded-2xl">
                   <div className="flex items-start space-x-4">
                     <MapPin className="w-6 h-6 text-primary shrink-0 mt-1" />
                     <div>
@@ -88,7 +88,7 @@ export default function Contact() {
                   </div>
                 </Card>
 
-                <Card className="p-6 hover:shadow-lg transition-all duration-300">
+                <Card className="p-6 hover:shadow-lg transition-all duration-300 rounded-2xl">
                   <div className="flex items-start space-x-4">
                     <Phone className="w-6 h-6 text-primary shrink-0 mt-1" />
                     <div>
@@ -103,7 +103,7 @@ export default function Contact() {
                   </div>
                 </Card>
 
-                <Card className="p-6 hover:shadow-lg transition-all duration-300">
+                <Card className="p-6 hover:shadow-lg transition-all duration-300 rounded-2xl">
                   <div className="flex items-start space-x-4">
                     <Mail className="w-6 h-6 text-primary shrink-0 mt-1" />
                     <div>
@@ -146,7 +146,7 @@ export default function Contact() {
                 ref={formRef}
                 className={`${formInView ? 'slide-up' : 'opacity-0 translate-y-8'}`}
               >
-                <Card className="p-8">
+                <Card className="p-8 rounded-2xl">
                   <h2 className="text-2xl font-bold mb-6">Send Us a Message</h2>
                   <form onSubmit={handleSubmit} className="space-y-6">
                     <div className="space-y-2">
@@ -158,6 +158,7 @@ export default function Contact() {
                         value={formData.name}
                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                         placeholder="Your name"
+                        className="rounded-xl"
                         required
                       />
                     </div>
@@ -172,6 +173,7 @@ export default function Contact() {
                         value={formData.email}
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                         placeholder="your.email@example.com"
+                        className="rounded-xl"
                         required
                       />
                     </div>
@@ -185,14 +187,14 @@ export default function Contact() {
                         value={formData.message}
                         onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                         placeholder="How can we help you?"
-                        className="min-h-[150px]"
+                        className="min-h-[150px] rounded-xl"
                         required
                       />
                     </div>
 
                     <Button 
                       type="submit"
-                      className="w-full bg-secondary hover:bg-secondary/90 text-secondary-foreground"
+                      className="w-full bg-secondary hover:bg-secondary/90 text-secondary-foreground rounded-full"
                     >
                       Send Message
                       <Send className="ml-2 h-4 w-4" />
