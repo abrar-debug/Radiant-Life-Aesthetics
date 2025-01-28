@@ -24,7 +24,7 @@ export default function About() {
         >
           <div className="absolute inset-0 z-0">
             <Image
-              src="https://images.unsplash.com/photo-1607006344380-b6775a0824a7?q=80&w=2070"
+              src="images/about-poster.webp"
               alt="Aesthetic background"
               fill
               className="object-cover"
@@ -61,7 +61,7 @@ export default function About() {
               </div>
               <div className="relative h-[600px] overflow-hidden rounded-2xl">
                 <Image
-                  src="https://i0.wp.com/radiantlifeaesthetics.co.za/wp-content/uploads/2022/04/pexels-monstera-6621353-1-e1651056438602.jpg?resize=1024%2C722&ssl=1"
+                  src="/images/gel-tub.webp"
                   alt="Our modern aesthetic clinic"
                   fill
                   className="object-cover"
@@ -81,7 +81,7 @@ export default function About() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
               <div className="relative h-[500px] overflow-hidden order-2 md:order-1 rounded-2xl">
                 <Image
-                  src="https://i0.wp.com/radiantlifeaesthetics.co.za/wp-content/uploads/2022/04/Screen-Shot-2022-04-05-at-21.18.49.png?w=575&ssl=1"
+                  src="/images/owner-img.webp"
                   alt="Our mission in action"
                   fill
                   className="object-cover"
@@ -120,7 +120,7 @@ export default function About() {
               </div>
               <div className="relative h-[600px] overflow-hidden rounded-2xl">
                 <Image
-                  src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=2070"
+                  src="/images/laptop-img.webp"
                   alt="Dr. Sarah Mitchell consulting with a patient"
                   fill
                   className="object-cover"

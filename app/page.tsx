@@ -14,37 +14,37 @@ const treatments = [
     id: "chemical-peels",
     title: "Chemical Peels",
     description: "A skin resurfacing treatment that removes dead cells, improving texture and tone for a radiant complexion.",
-    image: "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?q=80&w=2070",
+    image: "/images/chemical-peels.webp",
   },
   {
     id: "micro-needling",
     title: "Micro Needling",
     description: "A procedure using tiny needles to stimulate collagen production, reducing scars, wrinkles, and fine lines.",
-    image: "https://th.bing.com/th/id/R.0222cfaef51a3a200cdc83db3057a834?rik=1RvX3aRWlzfI7A&pid=ImgRaw&r=0",
+    image: "/images/micro-needle.webp",
   },
   {
     id: "neuromodulators",
     title: "Neuromodulators (Botox)",
     description: "Injectable treatments like Botox to relax muscles, minimizing dynamic wrinkles and creating a youthful look.",
-    image: "https://www.usdermatologypartners.com/wp-content/uploads/2016/10/iStock_54578486_LARGE.jpg",
+    image: "/images/botox.webp",
   },
   {
     id: "dermal-fillers",
     title: "Dermal Fillers",
     description: "Gel-like substances injected to restore volume, smooth wrinkles, and enhance facial contours.",
-    image: "https://lirp.cdn-website.com/047638b4/dms3rep/multi/opt/close-up-woman-during-lip-filler-procedure-1920w.jpg",
+    image: "/images/dermal-filler.webp",
   },
   {
     id: "dna-analysis",
     title: "Optiphi Helix DNA",
     description: "A personalized skincare solution using DNA analysis to create a regimen tailored to your skin's needs.",
-    image: "https://www.sandsaesthetics.co.za/wp-content/uploads/2022/05/Helix-Hormones-3-1024x683.jpg",
+    image: "/images/helix-treatment.webp",
   },
   {
     id: "iv-therapy",
     title: "IV Therapy",
     description: "A wellness treatment delivering vitamins and nutrients directly into your bloodstream for quick hydration and revitalization.",
-    image: "https://theinvigory.com/wp-content/uploads/2022/06/iv-therapy-thumbnail.jpg",
+    image: "/images/iv-therapy.webp",
   },
 ];
 
@@ -76,10 +76,10 @@ export default function Home() {
               loop
               playsInline
               className="object-cover w-full h-full"
-              poster="https://images.unsplash.com/photo-1579165466741-7f35e4755660?q=80&w=2070"
+              poster="/images/hero-poster.webp"
             >
               <source
-                src="https://videos.pexels.com/video-files/3763029/3763029-uhd_2560_1440_25fps.mp4"
+                src="/videos/hero-vid.mp4"
                 type="video/mp4"
               />
               Your browser does not support the video tag.
@@ -145,7 +145,7 @@ export default function Home() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
               <div className="relative h-[500px] overflow-hidden rounded-3xl">
                 <Image
-                  src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  src="/images/welcome-img.webp"
                   alt="Welcome to our studio"
                   fill
                   className="object-cover"
@@ -226,7 +226,7 @@ export default function Home() {
         >
           <div className="absolute inset-0 z-0">
             <Image
-              src="https://images.unsplash.com/photo-1590439471364-192aa70c0b53?q=80&w=2070"
+              src="/images/questions-poster.webp"
               alt="Questions background"
               fill
               className="object-cover"

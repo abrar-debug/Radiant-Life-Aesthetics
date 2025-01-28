@@ -76,8 +76,8 @@ export function Navigation() {
                 href={href}
                 className={cn(
                   "text-sm font-light transition-colors hover:text-secondary",
-                  isHomePage && !isScrolled ? "text-white" : "text-foreground",
-                  pathname === href && "text-secondary"
+                  isHomePage && !isScrolled ? "text-white" : "text-primary",
+                  pathname === href && "text-foreground"
                 )}
               >
                 {label}

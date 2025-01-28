@@ -129,7 +129,7 @@ export function Footer() {
                 className="relative w-24 h-8"
               >
                 <Image
-                  src="https://admin.kaizentech.co.za/kaizentech.svg"
+                  src="/logos/kaizentech.svg"
                   alt="Kaizen Tech"
                   fill
                   className="object-contain"

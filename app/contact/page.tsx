@@ -40,7 +40,7 @@ export default function Contact() {
         >
           <div className="absolute inset-0 z-0">
             <Image
-              src="https://images.unsplash.com/photo-1516796181074-bf453fbfa3e6?q=80&w=2070"
+              src="/images/contact-poster.webp"
               alt="Contact header"
               fill
               className="object-cover"
@@ -209,7 +209,7 @@ export default function Contact() {
         {/* Map Section */}
         <section className="h-[400px] relative">
           <Image
-            src="https://images.unsplash.com/photo-1524661135-423995f22d0b?q=80&w=2074"
+            src="/images/contact-footer.webp"
             alt="Location map"
             fill
             className="object-cover"
