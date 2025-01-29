@@ -55,7 +55,7 @@ export default function Contact() {
             <Button 
               size="lg" 
               className="bg-secondary text-foreground hover:bg-primary/20 rounded-full"
-              onClick={() => window.open('https://rla.healthaccess.co.za/#/public/bookings', '_blank')}
+              onClick={() => window.open('https://www.fresha.com/a/radiant-life-aesthetics-cape-town-6-wodehouse-crescent-u8c4r3m4/all-offer?menu=true&pId=600666', '_blank')}
             >
               Make a Booking
             </Button>

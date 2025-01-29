@@ -99,7 +99,7 @@ export default function Home() {
               <Button
                 size="lg"
                 className="bg-secondary/70 hover:bg-white/20 text-foreground rounded-full"
-                onClick={() => window.open('https://rla.healthaccess.co.za/#/public/bookings', '_blank')}>
+                onClick={() => window.open('https://www.fresha.com/a/radiant-life-aesthetics-cape-town-6-wodehouse-crescent-u8c4r3m4/all-offer?menu=true&pId=600666', '_blank')}>
                 Book Consultation
               </Button>
               <Button
