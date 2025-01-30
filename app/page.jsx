@@ -56,7 +56,7 @@ export default function Home() {
   const { ref: treatmentsRef, inView: treatmentsInView } = useInView({ triggerOnce: true, threshold: 0.1 });
   const { ref: questionsRef, inView: questionsInView } = useInView({ triggerOnce: true });
 
-  const handleLearnMore = (treatmentId: string) => {
+  const handleLearnMore = (treatmentId) => {
     router.push(`/treatments#${treatmentId}`);
   };
 

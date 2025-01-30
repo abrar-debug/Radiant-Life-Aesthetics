@@ -23,7 +23,7 @@ export default function Contact() {
   const { ref: contentRef, inView: contentInView } = useInView({ triggerOnce: true });
   const { ref: formRef, inView: formInView } = useInView({ triggerOnce: true });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     // Handle form submission here
     console.log(formData);

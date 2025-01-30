@@ -1,8 +1,8 @@
 import './globals.css';
-import type { Metadata } from 'next';
 import { Inter, Playball } from 'next/font/google';
 
-const inter = Inter({ 
+// Initialize the fonts
+const inter = Inter({
   subsets: ['latin'],
   weight: ['300', '400', '500', '600'],
   display: 'swap',
@@ -15,16 +15,12 @@ const playball = Playball({
   variable: '--font-playball',
 });
 
-export const metadata: Metadata = {
+export const metadata = {
   title: 'Radiant Life Aesthetics',
   description: 'Premium aesthetic treatments and expert care',
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${inter.className} ${playball.variable}`}>{children}</body>
