@@ -5,7 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
-import { Menu, Facebook, Instagram } from "lucide-react";
+import { Menu, Facebook, Instagram, CalendarCheck, CalendarPlus } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger, SheetHeader, SheetTitle } from "@/components/ui/sheet";
 
 export function Navigation() {
@@ -41,6 +41,19 @@ export function Navigation() {
       icon: Instagram,
       href: "https://www.instagram.com/radiant.life_aesthetics?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
       label: "Instagram"
+    }
+  ];
+
+  const bookingLinks = [
+    {
+      label: "Make a Booking",
+      href: "/book-appointment",
+      icon: CalendarPlus
+    },
+    {
+      label: "My Appointments",
+      href: "/manage-appointment",
+      icon: CalendarCheck
     }
   ];
 
@@ -85,7 +98,7 @@ export function Navigation() {
             ))}
           </div>
 
-          {/* Desktop Social Links */}
+          {/* Desktop Social + Booking Links */}
           <div className="hidden md:flex items-center space-x-4">
             {socialLinks.map((social) => (
               <Link
@@ -94,12 +107,24 @@ export function Navigation() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className={cn(
-                  "p-2  hover:text-secondary transition-colors",
+                  "p-2 hover:text-secondary transition-colors",
                   isHomePage && !isScrolled ? "text-white" : "text-foreground"
                 )}
                 aria-label={social.label}
               >
                 <social.icon className="w-5 h-5" />
+              </Link>
+            ))}
+
+            {/* Booking Links */}
+            {bookingLinks.map((booking) => (
+              <Link
+                key={booking.label}
+                href={booking.href}
+                className="p-2 flex items-center space-x-2 text-sm font-light transition-colors hover:text-secondary"
+              >
+                <booking.icon className="w-5 h-5" />
+                <span>{booking.label}</span>
               </Link>
             ))}
           </div>
@@ -145,7 +170,7 @@ export function Navigation() {
                     {label}
                   </Link>
                 ))}
-                
+
                 {/* Social Links */}
                 <div className="pt-8 mt-4 border-t">
                   <p className="text-sm text-muted-foreground mb-4 animate-in slide-in-from-right-4" 
@@ -170,6 +195,25 @@ export function Navigation() {
                       </Link>
                     ))}
                   </div>
+                </div>
+
+                {/* Booking Links */}
+                <div className="pt-6">
+                  {bookingLinks.map((booking, index) => (
+                    <Link
+                      key={booking.label}
+                      href={booking.href}
+                      className="flex items-center space-x-3 text-lg font-light text-foreground hover:text-primary transition-colors py-2 animate-in slide-in-from-right-4"
+                      style={{ 
+                        animationDelay: `${(navLinks.length + socialLinks.length + index) * 100}ms`,
+                        animationFillMode: 'backwards'
+                      }}
+                      onClick={() => setIsOpen(false)}
+                    >
+                      <booking.icon className="w-5 h-5" />
+                      <span>{booking.label}</span>
+                    </Link>
+                  ))}
                 </div>
               </nav>
             </SheetContent>
