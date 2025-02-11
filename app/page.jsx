@@ -99,7 +99,7 @@ export default function Home() {
             <div className="space-x-4">
               <Button
                 size="lg"
-                className="bg-secondary/70 hover:bg-white/20 text-foreground rounded-full"
+                className="bg-secondary/70 hover:bg-white/20 text-foreground"
                 onClick={() =>
                   window.open(
                     'https://www.fresha.com/a/radiant-life-aesthetics-cape-town-6-wodehouse-crescent-u8c4r3m4/all-offer?menu=true&pId=600666',
@@ -111,7 +111,7 @@ export default function Home() {
               </Button>
               <Button
                 size="lg"
-                className="mb-8 mx-auto bg-secondary/70 hover:bg-white/20 text-foreground rounded-full"
+                className="mb-8 mx-auto bg-secondary/70 hover:bg-white/20 text-foreground"
                 onClick={() => router.push('/contact')}
               >
                 Talk to Us
@@ -159,7 +159,7 @@ export default function Home() {
                 <h2 className="text-primary text-3xl md:text-4xl font-bold">
                   Welcome to Our Studio!
                 </h2>
-                <div className="w-20 h-1 bg-secondary rounded-full" />
+                <div className="w-20 h-1 bg-secondary " />
                 <p className="text-lg text-muted-foreground">
                   Our Studio is defined by our core values. Here at Radiant Life Aesthetics, we believe that well-being is about vitality and not age. After all, we’re only as ‘old’ as we feel – and we all know that looking good means feeling great! When it comes to looking good, the only ones we have to impress are ourselves.
                 </p>
@@ -167,7 +167,7 @@ export default function Home() {
                   Vitality is a celebration of where we are in life and how far we’ve come. Our bodies and the skin we’re in has brought us here, isn’t that something to celebrate?
                 </p>
                 <Button
-                  className="bg-secondary hover:bg-primary/20 text-secondary-foreground mt-4 rounded-full"
+                  className="bg-secondary hover:bg-primary/20 text-secondary-foreground mt-4"
                   onClick={() => router.push('/about')}
                 >
                   Learn More About Us
@@ -187,7 +187,7 @@ export default function Home() {
               {treatments.map((treatment) => (
                 <Card
                   key={treatment.title}
-                  className={`overflow-hidden group transition-all duration-500 hover:shadow-lg transform hover:-translate-y-1 rounded-2xl ${
+                  className={`overflow-hidden group transition-all duration-500 hover:shadow-lg transform hover:-translate-y-1 ${
                     treatmentsInView ? 'slide-up opacity-100' : 'opacity-0 translate-y-8'
                   }`}
                 >
@@ -242,7 +242,7 @@ export default function Home() {
             </p>
             <Button
               size="lg"
-              className="bg-secondary hover:bg-primary/20 text-secondary-foreground rounded-full"
+              className="bg-secondary hover:bg-primary/20 text-secondary-foreground "
               onClick={() => router.push('/contact')}
             >
               Talk to Us

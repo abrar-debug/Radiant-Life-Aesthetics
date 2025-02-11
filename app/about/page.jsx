@@ -48,7 +48,7 @@ export default function About() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
               <div className="space-y-6">
                 <h2 className="text-3xl md:text-4xl font-bold text-primary">Welcome to Our Studio</h2>
-                <div className="w-20 h-1 bg-secondary rounded-full" />
+                <div className="w-20 h-1 bg-secondary " />
                 <p className="text-lg text-muted-foreground">
                   Radiant Life Aesthetics is a new Aesthetic Studio on Constantia, Cape Town, founded by Dr Mishqah Dollie.  At Radiant Life, we celebrate skin rejuvenation through medical grade skin renewal and enhancement treatments.
                 </p>
@@ -59,7 +59,7 @@ export default function About() {
                   Here at Radiant Life aesthetics we want to slow down the raging process,  by maintaining your beautifully natural and youthful looking skin, while also preventing further damage.
                 </p>
               </div>
-              <div className="relative h-[600px] overflow-hidden rounded-2xl">
+              <div className="relative h-[600px] overflow-hidden  rounded-2xl">
                 <Image
                   src="/images/gel-tub.webp"
                   alt="Our modern aesthetic clinic"
@@ -90,7 +90,7 @@ export default function About() {
               </div>
               <div className="space-y-6 order-1 md:order-2">
                 <h2 className="text-3xl md:text-4xl font-bold text-primary">Our Mission</h2>
-                <div className="w-20 h-1 bg-secondary rounded-full" />
+                <div className="w-20 h-1 bg-secondary " />
                 <p className="text-lg text-muted-foreground">
                   We created our studio to give women (and men) the confidence to tap into the best within ourselves, because we’re often the only ones standing in our way.
                 </p>
@@ -111,7 +111,7 @@ export default function About() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
               <div className="space-y-6">
                 <h2 className="text-3xl md:text-4xl font-bold text-primary">Giving My Patients the Perfect Smile Wasn't Enough</h2>
-                <div className="w-20 h-1 bg-secondary rounded-full" />
+                <div className="w-20 h-1 bg-secondary " />
                 <p className="text-lg text-muted-foreground">
                 As a practitioner with over 15 years of experience, I realized that true aesthetic wellness goes beyond any single treatment. It's about creating harmony between inner confidence and outer radiance, about understanding each patient's unique needs and desires.
                 </p>

@@ -145,14 +145,14 @@ export default function Treatments() {
                 >
                   <div className={`space-y-4 md:space-y-6 ${index % 2 === 0 ? 'lg:order-1' : 'lg:order-2'}`}>
                     <h2 className="text-2xl md:text-3xl font-bold text-primary">{treatment.title}</h2>
-                    <div className="w-20 h-1 bg-secondary rounded-full" />
+                    <div className="w-20 h-1 bg-secondary " />
 
-                    <Card className="p-4 md:p-6 bg-secondary/5 rounded-2xl">
+                    <Card className="p-4 md:p-6 bg-secondary/5 ">
                       <h3 className="text-lg md:text-xl font-semibold mb-3 md:mb-4 text-primary">What is it?</h3>
                       <p className="text-sm md:text-base text-muted-foreground">{treatment.whatIsIt}</p>
                     </Card>
 
-                    <Card className="p-4 md:p-6 bg-secondary/5 rounded-2xl">
+                    <Card className="p-4 md:p-6 bg-secondary/5 ">
                       <h3 className="text-lg md:text-xl font-semibold mb-3 md:mb-4 text-primary">Who can benefit?</h3>
                       <p className="text-sm md:text-base text-muted-foreground mb-3 md:mb-4">{treatment.whoCanBenefit}</p>
 
@@ -193,14 +193,14 @@ export default function Treatments() {
 
                     <div className="flex flex-col md:flex-row gap-4">
                       <Button
-                        className="flex-1 bg-secondary hover:bg-primary/20 text-secondary-foreground rounded-full"
+                        className="flex-1 bg-secondary hover:bg-primary/20 text-secondary-foreground "
                         onClick={() => window.open('https://www.fresha.com/a/radiant-life-aesthetics-cape-town-6-wodehouse-crescent-u8c4r3m4/all-offer?menu=true&pId=600666', '_blank')}
                       >
                         Make a Booking
                       </Button>
                       <Button
 
-                        className="flex-1 border-secondary text-foreground hover:bg-secondary/20 rounded-full"
+                        className="flex-1 border-secondary text-foreground hover:bg-secondary/20 "
                         onClick={() => router.push('/contact')}
                       >
                         Talk to Us
