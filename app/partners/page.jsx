@@ -2,8 +2,6 @@
 
 import { useInView } from "react-intersection-observer";
 import Image from "next/image";
-import { Navigation } from "@/components/navigation";
-import { Footer } from "@/components/footer";
 import { Card } from "@/components/ui/card";
 import { ExternalLink } from "lucide-react";
 import Link from "next/link";
@@ -57,7 +55,6 @@ export default function Partners() {
 
   return (
     <>
-      <Navigation />
       <main className="pt-16">
         {/* Header Section */}
         <section
@@ -134,7 +131,7 @@ export default function Partners() {
 
 
       </main>
-      <Footer />
+      
     </>
   );
 }

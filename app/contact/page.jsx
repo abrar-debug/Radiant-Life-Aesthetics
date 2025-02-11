@@ -4,8 +4,6 @@ import { useState } from "react";
 import { useInView } from "react-intersection-observer";
 import Image from "next/image";
 import Link from "next/link";
-import { Navigation } from "@/components/navigation";
-import { Footer } from "@/components/footer";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -31,7 +29,6 @@ export default function Contact() {
 
   return (
     <>
-      <Navigation />
       <main className="pt-16">
         {/* Header Section */}
         <section
@@ -217,7 +214,7 @@ export default function Contact() {
           <div className="absolute inset-0 bg-foreground/10" />
         </section>
       </main>
-      <Footer />
+      
     </>
   );
 }

@@ -6,44 +6,48 @@ import { Quote } from "lucide-react";
 import { useInView } from "react-intersection-observer";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-import { Navigation } from "@/components/navigation";
-import { Footer } from "@/components/footer";
 
 const treatments = [
   {
     id: "chemical-peels",
     title: "Chemical Peels",
-    description: "A skin resurfacing treatment that removes dead cells, improving texture and tone for a radiant complexion.",
+    description:
+      "A skin resurfacing treatment that removes dead cells, improving texture and tone for a radiant complexion.",
     image: "/images/chemical-peels.webp",
   },
   {
     id: "micro-needling",
     title: "Micro Needling",
-    description: "A procedure using tiny needles to stimulate collagen production, reducing scars, wrinkles, and fine lines.",
+    description:
+      "A procedure using tiny needles to stimulate collagen production, reducing scars, wrinkles, and fine lines.",
     image: "/images/micro-needle.webp",
   },
   {
     id: "neuromodulators",
     title: "Neuromodulators (Botox)",
-    description: "Injectable treatments like Botox to relax muscles, minimizing dynamic wrinkles and creating a youthful look.",
+    description:
+      "Injectable treatments like Botox to relax muscles, minimizing dynamic wrinkles and creating a youthful look.",
     image: "/images/botox.webp",
   },
   {
     id: "dermal-fillers",
     title: "Dermal Fillers",
-    description: "Gel-like substances injected to restore volume, smooth wrinkles, and enhance facial contours.",
+    description:
+      "Gel-like substances injected to restore volume, smooth wrinkles, and enhance facial contours.",
     image: "/images/dermal-filler.webp",
   },
   {
     id: "dna-analysis",
     title: "Optiphi Helix DNA",
-    description: "A personalized skincare solution using DNA analysis to create a regimen tailored to your skin's needs.",
+    description:
+      "A personalized skincare solution using DNA analysis to create a regimen tailored to your skin's needs.",
     image: "/images/helix-treatment.webp",
   },
   {
     id: "iv-therapy",
     title: "IV Therapy",
-    description: "A wellness treatment delivering vitamins and nutrients directly into your bloodstream for quick hydration and revitalization.",
+    description:
+      "A wellness treatment delivering vitamins and nutrients directly into your bloodstream for quick hydration and revitalization.",
     image: "/images/iv-therapy.webp",
   },
 ];
@@ -63,8 +67,8 @@ export default function Home() {
   return (
     <>
       <main className="min-h-screen">
-        <Navigation />
 
+        {/* Hero Section */}
         <section
           ref={heroRef}
           className={`relative h-screen flex items-center justify-center ${heroInView ? 'fade-in' : 'opacity-0'}`}
@@ -78,10 +82,7 @@ export default function Home() {
               className="object-cover w-full h-full"
               poster="/images/hero-poster.webp"
             >
-              <source
-                src="/videos/hero-vid.mp4"
-                type="video/mp4"
-              />
+              <source src="/videos/hero-vid.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
             <div className="absolute inset-0 bg-gradient-to-b from-primary/70 via-secondary/40 to-background/95" />
@@ -99,48 +100,49 @@ export default function Home() {
               <Button
                 size="lg"
                 className="bg-secondary/70 hover:bg-white/20 text-foreground rounded-full"
-                onClick={() => window.open('https://www.fresha.com/a/radiant-life-aesthetics-cape-town-6-wodehouse-crescent-u8c4r3m4/all-offer?menu=true&pId=600666', '_blank')}>
+                onClick={() =>
+                  window.open(
+                    'https://www.fresha.com/a/radiant-life-aesthetics-cape-town-6-wodehouse-crescent-u8c4r3m4/all-offer?menu=true&pId=600666',
+                    '_blank'
+                  )
+                }
+              >
                 Book Consultation
               </Button>
               <Button
                 size="lg"
-                className=" mb-8 mx-auto bg-secondary/70 hover:bg-white/20 text-foreground rounded-full"
-                onClick={() => router.push('/contact')}>
+                className="mb-8 mx-auto bg-secondary/70 hover:bg-white/20 text-foreground rounded-full"
+                onClick={() => router.push('/contact')}
+              >
                 Talk to Us
               </Button>
             </div>
-
           </div>
         </section>
 
-        {/* Quote */}
+        {/* Quote Section */}
         <section
           ref={quoteRef}
           className={`py-20 bg-background/50 ${quoteInView ? 'fade-in' : 'opacity-0'}`}
         >
-
-          <div className="container  mx-auto text-center">
+          <div className="container mx-auto text-center">
             <Quote className="w-16 h-16 text-secondary mx-auto mb-8 opacity-50" />
             <blockquote className="text-2xl md:text-2xl font-light italic text-foreground/50 max-w-4xl mx-auto mb-8">
               "My aim is not to change your face but to enhance the natural beauty that already exists by also slowing down the aging process for as long as possible."
             </blockquote>
-
             <div className="flex items-center justify-center space-x-4">
               <div className="text-left">
-                <p className="font-semibold text-foreground/80">
-                  – Mishqah Dollie
-                </p>
+                <p className="font-semibold text-foreground/80">– Mishqah Dollie</p>
               </div>
             </div>
-
           </div>
         </section>
 
-        {/* Welcome */}
+        {/* Welcome Section */}
         <section
           ref={welcomeRef}
-          className={`py-24 bg-background ${welcomeInView ? 'fade-in' : 'opacity-0'}`}>
-
+          className={`py-24 bg-background ${welcomeInView ? 'fade-in' : 'opacity-0'}`}
+        >
           <div className="container px-4 mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
               <div className="relative h-[500px] overflow-hidden rounded-3xl">
@@ -159,40 +161,36 @@ export default function Home() {
                 </h2>
                 <div className="w-20 h-1 bg-secondary rounded-full" />
                 <p className="text-lg text-muted-foreground">
-                  Our Studio is defined by our core values.  Here at Radiant Life Aesthetics, we believe that well-being is about vitality and not age.. After all, we’re only as ‘old’ as we feel – and we all know that looking good means feeling great! When it comes to looking good, the only ones we have to impress are ourselves.
+                  Our Studio is defined by our core values. Here at Radiant Life Aesthetics, we believe that well-being is about vitality and not age. After all, we’re only as ‘old’ as we feel – and we all know that looking good means feeling great! When it comes to looking good, the only ones we have to impress are ourselves.
                 </p>
                 <p className="text-lg text-muted-foreground">
                   Vitality is a celebration of where we are in life and how far we’ve come. Our bodies and the skin we’re in has brought us here, isn’t that something to celebrate?
                 </p>
                 <Button
                   className="bg-secondary hover:bg-primary/20 text-secondary-foreground mt-4 rounded-full"
-                  onClick={() => router.push('/about')}>
+                  onClick={() => router.push('/about')}
+                >
                   Learn More About Us
                 </Button>
               </div>
-
             </div>
           </div>
         </section>
 
-        {/* Treatments */}
-        <section
-          id="treatments"
-          ref={treatmentsRef}
-          className="py-20"
-        >
+        {/* Treatments Section */}
+        <section id="treatments" ref={treatmentsRef} className="py-20">
           <div className="container px-4 mx-auto">
             <h2 className="text-primary text-3xl md:text-4xl font-bold text-center mb-12">
               What we can do for you
             </h2>
-
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {treatments.map((treatment, index) => (
+              {treatments.map((treatment) => (
                 <Card
                   key={treatment.title}
-                  className={`overflow-hidden group transition-all duration-500 hover:shadow-lg transform hover:-translate-y-1 rounded-2xl
-                    ${treatmentsInView ? 'slide-up opacity-100' : 'opacity-0 translate-y-8'}`}>
-
+                  className={`overflow-hidden group transition-all duration-500 hover:shadow-lg transform hover:-translate-y-1 rounded-2xl ${
+                    treatmentsInView ? 'slide-up opacity-100' : 'opacity-0 translate-y-8'
+                  }`}
+                >
                   <div className="relative h-48 w-full">
                     <Image
                       src={treatment.image}
@@ -203,7 +201,9 @@ export default function Home() {
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                   </div>
                   <div className="p-6 relative">
-                    <h3 className="text-xl font-semibold mb-2 treatment-card-title">{treatment.title}</h3>
+                    <h3 className="text-xl font-semibold mb-2 treatment-card-title">
+                      {treatment.title}
+                    </h3>
                     <p className="text-muted-foreground">{treatment.description}</p>
                     <Button
                       variant="ghost"
@@ -219,7 +219,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Questions */}
+        {/* Questions Section */}
         <section
           ref={questionsRef}
           className={`relative py-20 ${questionsInView ? 'fade-in' : 'opacity-0'}`}
@@ -250,7 +250,7 @@ export default function Home() {
           </div>
         </section>
       </main>
-      <Footer />
+      
     </>
   );
 }
